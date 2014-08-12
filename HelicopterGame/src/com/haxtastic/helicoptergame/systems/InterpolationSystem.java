@@ -35,7 +35,6 @@ public class InterpolationSystem extends EntityProcessingSystem {
 
 	protected void process(Entity e) {
 		Position position = pm.get(e);
-		position.px = position.x; position.py = position.y;
 		position.x = position.x*alpha + position.px * (1.0f - alpha);
 		position.y = position.y*alpha + position.py * (1.0f - alpha);
 	}
